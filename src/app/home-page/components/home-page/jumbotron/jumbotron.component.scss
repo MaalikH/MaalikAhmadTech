@@ -1,0 +1,40 @@
+.jumbotron{
+  height: 100vh;
+  background-color: #212121;
+  margin-bottom: 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jumbo-image {
+    max-width: 600px;
+    margin-top: -10vh;
+  }
+
+  @media (max-width: 576px) {
+    .jumbo-image {
+      max-width: 350px;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 767.98px) {
+    .jumbo-image {
+      max-width: 550px;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 991.98px) {
+    .jumbo-image {
+      max-width: 400px;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+
+  }
+}
