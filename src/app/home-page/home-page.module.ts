@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
+import { AnimateInModule } from 'ngx-animate-in';
+import { InViewportModule } from 'ng-in-viewport';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import {HomePageRoutingModule} from './home-page-routing.module';
@@ -16,12 +20,15 @@ import { ContactComponent } from './components/home-page/contact/contact.compone
 import { FooterComponent } from '../footer/footer.component';
 
 
+
 @NgModule({
  imports: [
    HomePageRoutingModule,
    AngularFontAwesomeModule,
-   CommonModule
+   CommonModule,
+   InViewportModule,
+   AnimateInModule
  ],
-  declarations: [HomePageComponent, JumbotronComponent, TechnologyBannerComponent, WhyChooseUsComponent, ServicesComponent, OurWorkComponent, WebsitesComponent, GraphicDesignComponent, BrandingComponent, ContactComponent, FooterComponent]
+  declarations: [HomePageComponent, JumbotronComponent, TechnologyBannerComponent, WhyChooseUsComponent, ServicesComponent, OurWorkComponent, WebsitesComponent, GraphicDesignComponent, BrandingComponent, ContactComponent]
 })
 export class HomePageModule { }

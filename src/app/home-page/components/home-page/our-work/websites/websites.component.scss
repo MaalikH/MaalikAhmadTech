@@ -10,8 +10,9 @@
   background-size: cover;
   position: absolute;
   top: 10px;
-  right: 54px;
-
+  left: 0;
+  right: 0;
+  margin: auto;
   -webkit-transition: background-position 3s ease-in-out;
   -moz-transition: background-position 3s ease-in-out;
   -ms-transition: background-position 3s ease-in-out;
@@ -36,8 +37,9 @@
   background-size: cover;
   position: absolute;
   top: 10px;
-  right: 54px;
-
+  left: 0;
+  right: 0;
+  margin: auto;
   -webkit-transition: background-position 3s ease-in-out;
   -moz-transition: background-position 3s ease-in-out;
   -ms-transition: background-position 3s ease-in-out;
@@ -62,8 +64,9 @@
   background-size: cover;
   position: absolute;
   top: 10px;
-  right: 54px;
-
+  left: 0;
+  right: 0;
+  margin: auto;
   -webkit-transition: background-position 3s ease-in-out;
   -moz-transition: background-position 3s ease-in-out;
   -ms-transition: background-position 3s ease-in-out;
@@ -81,4 +84,6 @@
   width:300px;
   height:220px;
   z-index: 1;
+  margin-bottom: 25px;
 }
+

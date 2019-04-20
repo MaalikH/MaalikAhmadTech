@@ -5,7 +5,7 @@
   src: url("../assets/fonts/Exo2-Regular.otf");
 }
 
-body, h1, h2, h3, h4, h5, p, a, .btn {
+body, h1, h2, h3, h4, h5, p, a, .btn, li {
   font-family: Exo2, sans-serif;
 }
 html,body
@@ -19,19 +19,14 @@ html,body
 
 .bg-matech {
   background-color: #212121 !important;
+  border-bottom: 1px solid $primary;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: $primary;
 }
 .container-fluid {
   background-color: #212121;
-}
-
-.page-footer {
-  border-top: 1px solid $primary;
-  background-color: #212121;
-  color: white;
-
-  a {
-    color: $primary;
-  }
 }
 
 .section {

@@ -1,9 +1,10 @@
 @import "../../../../../variables";
 
 .container-fluid {
-  background-color: #212121;
+  background-color: $alt !important;
   color: white;
   position: relative;
+  border-bottom: 2px solid $secondary;
 
   .why-section {
     display: flex;
@@ -29,7 +30,7 @@
   }
 
   p {
-    color: white;
+    color: $primary;
     font-size: 14px;
   }
 
@@ -38,4 +39,12 @@
     width: 40%;
     border-bottom: 1px solid red;
   }
+
+}
+
+@media (max-width: 767px) {
+  .why-us-section {
+    flex-direction: column;
+  }
+
 }

@@ -39,3 +39,10 @@ a {
     color: $primary
   }
 }
+
+@media (max-width: 1000px) {
+
+  .contact-bar {
+    flex-direction: column;
+  }
+}
