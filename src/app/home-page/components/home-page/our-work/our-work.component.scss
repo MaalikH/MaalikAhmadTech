@@ -1,5 +1,9 @@
 @import "../../../../../variables";
 
+.container-fluid {
+  background-color: $alt !important;
+}
+
 .nav {
   margin-bottom: 50px;
 }
@@ -17,7 +21,7 @@
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   background-color: transparent;
   border-bottom: 2px solid $primary;
-  color: white;
+  color: $primary;
 }
 
 
