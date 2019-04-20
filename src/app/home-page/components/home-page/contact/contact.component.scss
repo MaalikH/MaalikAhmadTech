@@ -2,21 +2,34 @@
 
 .container-fluid {
   padding: 50px 0 100px 0 !important;
-  background-color: $primary !important;
+  background-image: linear-gradient(0deg,rgba(222,33,61,.9),rgba(222,33,61,.9)), url("../../../../../assets/home/jumbo-bg/jumbo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
+.contact-container {
+  margin-bottom: -260px;
+}
+
+.filler {
+  margin-bottom: 250px;
+}
+
+.section-title {
+  color: $alt !important;
+}
 a {
   text-decoration: none;
 }
 
 .contact-bar {
-  border: 2px solid $secondary;
+  border: 2px solid $primary;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .center-section {
-  border-left: 1px solid $secondary;
-  border-right: 1px solid $secondary;
+  border-left: 1px solid $primary;
+  border-right: 1px solid $primary;
 }
 
 .contact-section {
@@ -27,7 +40,7 @@ a {
   background-color: $alt;
 
   .title {
-    color: $secondary;
+    color: $primary;
   }
 
   .icon {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentLoadedService} from '../../../services/content-loaded.service';
+import {NavbarService} from '../../../services/navbar.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,10 +9,11 @@ import {ContentLoadedService} from '../../../services/content-loaded.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private contentLoaded: ContentLoadedService) { }
+  constructor(private contentLoaded: ContentLoadedService, private navbarService: NavbarService) { }
 
   ngOnInit() {
     this.contentLoaded.onContentLoad(true);
+    this.navbarService.setNavbar(true);
   }
 
 }

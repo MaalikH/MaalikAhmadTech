@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="d-flex" [ngClass]="'col-md-'+ 12/pricingInfo.length" *ngFor="let price of pricingInfo">
+    <div class="card text-center" [ngClass]="class">
+      <h5 class="card-header">{{price.title}}</h5>
+      <div class="card-body flex-fill">
+        <h2 class="card-title">${{price.price}}</h2>
+        <ul class="list-group list-group-flush text-left">
+          <li class="list-group-item" *ngFor="let info of price.info">{{info}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

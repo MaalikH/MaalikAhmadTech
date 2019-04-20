@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PricingModel} from '../../models/pricing.model';
 import {ContentLoadedService} from '../../../services/content-loaded.service';
+import {NavbarService} from '../../../services/navbar.service';
 
 @Component({
   selector: 'app-pricing-page',
@@ -20,16 +21,6 @@ export class PricingPageComponent implements OnInit {
       ]
     },
     {
-      title: 'COMPLETE WEBSITE',
-      price: 700,
-      info: [
-        'Complete Website With Up to 6 Main Pages',
-        'Design Tailored to Customer\'s Brand',
-        'Client Control of Pages & Content',
-        '14-21 day turnaround'
-      ]
-    },
-    {
       title: 'LANDING PAGE',
       price: 400,
       info: [
@@ -37,7 +28,27 @@ export class PricingPageComponent implements OnInit {
         'Showcase Pricing, Previous Work, and Collect Customer Data',
         '10-21 day turnaround'
       ]
-    }
+    },
+    {
+      title: 'WEBSITE PRO',
+      price: 700,
+      info: [
+        'Complete Website With Up to 6 Main Pages',
+        'Choose from 5-10 design templates tailored towards your target audience',
+        'Stock images included',
+        '14-21 day turnaround'
+      ]
+    },
+    {
+      title: 'WEBSITE PRO',
+      price: 1000,
+      info: [
+        'Complete Website With Up to 6 Main Pages',
+        'Custom design & wireframes',
+        'Stock images included',
+        '21-28 day turnaround'
+      ]
+    },
   ];
   eCommercePricing: PricingModel[] = [
     {
@@ -127,7 +138,9 @@ export class PricingPageComponent implements OnInit {
   ];
   activeTab = 'websites';
 
-  constructor(private contentLoaded: ContentLoadedService) { }
+  constructor(private contentLoaded: ContentLoadedService, private navbarService: NavbarService) {
+    this.navbarService.setNavbar(false);
+  }
 
   ngOnInit() {
     this.contentLoaded.onContentLoad(true);

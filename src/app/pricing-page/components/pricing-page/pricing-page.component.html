@@ -26,24 +26,16 @@
     </div>
 
     <div class="row d-flex justify-content-center" animateIn *ngIf="activeTab === 'websites'">
-      <div class="d-flex" *ngFor="let price of webPricing">
-        <app-pricing-card [pricingInfo]="price" [class]="'web'"></app-pricing-card>
-      </div>
+        <app-pricing-card [pricingInfo]="webPricing" [class]="'web'"></app-pricing-card>
     </div>
     <div class="row d-flex justify-content-center" *ngIf="activeTab === 'ecommerce'">
-        <div class="d-flex" *ngFor="let price of eCommercePricing">
-          <app-pricing-card [pricingInfo]="price" [class]="'ecommerce'"></app-pricing-card>
-        </div>
+          <app-pricing-card [pricingInfo]="eCommercePricing" [class]="'ecommerce'"></app-pricing-card>
     </div>
     <div class="row d-flex justify-content-center" *ngIf="activeTab === 'design'">
-        <div class="d-flex" *ngFor="let price of designPricing">
-          <app-pricing-card [pricingInfo]="price" [class]="'design'"></app-pricing-card>
-        </div>
+          <app-pricing-card [pricingInfo]="designPricing" [class]="'design'"></app-pricing-card>
     </div>
     <div class="row d-flex justify-content-center" *ngIf="activeTab === 'branding'">
-        <div class="d-flex" *ngFor="let price of brandingPricing">
-          <app-pricing-card [pricingInfo]="price" [class]="'branding'"></app-pricing-card>
-        </div>
+          <app-pricing-card [pricingInfo]="brandingPricing" [class]="'branding'"></app-pricing-card>
     </div>
 
     <div class="row" *ngIf="activeTab === 'websites'">
