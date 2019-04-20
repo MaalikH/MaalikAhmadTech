@@ -2,24 +2,16 @@
 
 .service-icon {
   font-size: 4em;
-  color: $alt;
-}
-
-.section {
-  background-color: $primary !important;
-}
-
-.section-title {
-  color: $alt !important;
+  color: $primary;
 }
 
 .card {
   padding: 25px 5px;
   border-radius: 0;
   color: white;
-  background-color: transparent;
+  background-color: #242424;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  border: 1px solid $alt;
+  border: 1px solid $primary;
   margin-bottom: 25px;
 
   &:hover {
