@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  color: $secondary !important;
+  color: $alt !important;
 }
 
 a {
@@ -14,13 +14,13 @@ a {
 }
 
 .contact-bar {
-  border: 2px solid $secondary;
+  border: 2px solid $alt;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .center-section {
-  border-left: 1px solid $secondary;
-  border-right: 1px solid $secondary;
+  border-left: 1px solid $alt;
+  border-right: 1px solid $alt;
 }
 
 .contact-section {
@@ -28,10 +28,10 @@ a {
   height: 300px;
 
 
-  background-color: $alt;
+  background-color: $primary;
 
   .title {
-    color: $secondary;
+    color: $alt;
   }
 
   .icon {
@@ -41,7 +41,7 @@ a {
   i {
     font-size: 4em;
     margin-bottom: 25px;
-    color: $primary
+    color: $alt
   }
 }
 
