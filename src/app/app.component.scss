@@ -22,8 +22,13 @@ html,body
 }
 
 .navbar-off-home {
-  background-color: $primary !important;
-  border-bottom: 1px solid $alt;
+  background-color: white !important;
+  color: $primary;
+  border-bottom: 1px solid $primary;
+
+  .nav-link {
+    color: $primary !important;
+  }
 }
 
 .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {

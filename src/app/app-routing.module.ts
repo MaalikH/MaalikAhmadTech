@@ -16,8 +16,8 @@ const routes: Routes = [
     loadChildren: './pricing-page/pricing-page.module#PricingPageModule'
   },
   {
-    path: 'portfolio',
-    loadChildren: './portfolio/portfolio.module#PortfolioPageModule'
+    path: 'templates',
+    loadChildren: './template-page/template-page.module#TemplatePageModule'
   },
   {
     path: 'contact',
@@ -26,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

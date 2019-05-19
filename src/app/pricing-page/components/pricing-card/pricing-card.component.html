@@ -3,7 +3,7 @@
     <div class="card text-center" [ngClass]="class">
       <h5 class="card-header">{{price.title}}</h5>
       <div class="card-body flex-fill">
-        <h2 class="card-title">${{price.price}}</h2>
+        <h2 class="card-title">${{price.price}} <span *ngIf="price.hourly">HR</span></h2>
         <ul class="list-group list-group-flush text-left">
           <li class="list-group-item" *ngFor="let info of price.info">{{info}}</li>
         </ul>

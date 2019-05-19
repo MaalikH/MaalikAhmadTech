@@ -1,0 +1,129 @@
+<app-page-header [title]="'TEMPLATES'" [subtitle]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'">
+  <div class="row text-center">
+    <div class="col-lg-12 text-center">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="onTabClick('landing-page')" data-toggle="pill">LANDING PAGE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onTabClick('business')" data-toggle="pill" href="#">BUSINESSES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onTabClick('restaurant')" data-toggle="pill" href="#">RESTAURANTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onTabClick('e-commerce')" data-toggle="pill" href="#">E-COMMERCE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onTabClick('portfolio')" data-toggle="pill" href="#">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onTabClick('beauty')" data-toggle="pill" href="#">BEAUTY</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</app-page-header>
+<div class="container-fluid">
+  <div class="row" *ngIf="activeTab === 'landing-page'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template1.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template2.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template3.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeTab === 'restaurant'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template4.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template5.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template6.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeTab === 'business'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template7.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template8.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template9.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeTab === 'e-commerce'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template10.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template11.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template12.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeTab === 'portfolio'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template1.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template2.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template3.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="activeTab === 'beauty'">
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template1.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template2.jpg'">
+      </app-website-preview>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <app-website-preview [site]="'../../../../assets/templates/template3.jpg'">
+      </app-website-preview>
+    </div>
+  </div>
+</div>

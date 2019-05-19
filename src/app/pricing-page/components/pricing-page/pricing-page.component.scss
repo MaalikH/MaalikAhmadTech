@@ -7,7 +7,7 @@
 
 .nav-item {
   a {
-    color: $primary;
+    color: $alt;
   }
 
   .nav-link {
@@ -17,8 +17,21 @@
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   background-color: transparent;
-  border-bottom: 2px solid $primary;
-  color: $primary;
+  border-bottom: 2px solid $alt;
+  color: $alt;
+}
+
+.section {
+  padding-top: 0 !important;
+  margin-top: -60px;
+}
+
+.header {
+  background-image: url("../../../../assets/home/shaking-hand.png");
+  background-size: cover;
+  color: white !important;
+  padding-top: 75px;
+  padding-bottom: 100px;
 }
 
 .footer-text {
@@ -52,7 +65,12 @@
   border-radius: 0;
 }
 
+.pricing-cards {
+  margin-top: -100px;
+  margin-bottom: 50px;
+}
+
 h3 {
-  color: $primary
+  color: $alt;
 }
 

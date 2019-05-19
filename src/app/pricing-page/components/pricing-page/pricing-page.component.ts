@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PricingModel} from '../../models/pricing.model';
-import {ContentLoadedService} from '../../../services/content-loaded.service';
-import {NavbarService} from '../../../services/navbar.service';
+import {ContentLoadedService} from '../../../shared/services/content-loaded.service';
+import {NavbarService} from '../../../shared/services/navbar.service';
+import {PricingServiceService} from '../../../shared/services/pricing-service.service';
 
 @Component({
   selector: 'app-pricing-page',
@@ -15,60 +16,62 @@ export class PricingPageComponent implements OnInit {
       title: 'RESUME PAGE',
       price: 250,
       info: [
-        'Perfect for Professionals & Portfolio Showcases',
-        'Multiple Design Templates to Choose From',
-        '7-14 day turnaround'
+        'Professionals & Portfolio Showcase',
+        '3+ Resume Template Choices',
+        '7 Day Turnaround'
       ]
     },
     {
       title: 'LANDING PAGE',
-      price: 400,
+      price: 450,
       info: [
-        'Single Page Perfect for a Brief Intro to Your Business, Brand, or Program',
+        'One Page Introduction to Your Business, Brand, or Program',
+        'Provide Info and Contact Information',
         'Showcase Pricing, Previous Work, and Collect Customer Data',
-        '10-21 day turnaround'
+        '14-21 Day Turnaround'
       ]
     },
     {
       title: 'WEBSITE PRO',
-      price: 700,
+      price: 750,
       info: [
         'Complete Website With Up to 6 Main Pages',
-        'Choose from 5-10 design templates tailored towards your target audience',
-        'Stock images included',
+        'Variety of Design Templates to Choose From',
+        '5 Stock Images Included',
         '14-21 day turnaround'
       ]
     },
     {
-      title: 'WEBSITE PRO',
-      price: 1000,
+      title: 'WEBSITE ELITE',
+      price: 40,
       info: [
         'Complete Website With Up to 6 Main Pages',
-        'Custom design & wireframes',
-        'Stock images included',
+        'Custom Design & Wireframes',
+        'Database & Server Setup',
+        'Stock Images Included',
         '21-28 day turnaround'
-      ]
+      ],
+      hourly: true
     },
   ];
   eCommercePricing: PricingModel[] = [
     {
       title: 'E-COMMERCE LIGHT',
-      price: 500,
+      price: 550,
       info: [
-        'Shopify Design Template',
-        'Store Setup (Max 20 Products)',
-        'Hosting through Shopify ($30/month)',
+        'Shopify Design',
+        'Store Setup (Max 15 Products)',
+        'Hosting by Shopify ($30/month)',
         '14-21 day turnaround',
       ]
     },
     {
       title: 'E-COMMERCE PREMIUM',
-      price: 800,
+      price: 850,
       info: [
         'Custom WooCommerce Design & Setup',
-        'No Monthly Payment',
-        '1 Year Hosting & Domain Name',
-        '21-30 day turnaround'
+        'Hosting Included (No Monthly Payment)',
+        '21-28 day turnaround'
       ]
     },
   ];
@@ -138,16 +141,21 @@ export class PricingPageComponent implements OnInit {
   ];
   activeTab = 'websites';
 
-  constructor(private contentLoaded: ContentLoadedService, private navbarService: NavbarService) {
-    this.navbarService.setNavbar(false);
+  constructor(private contentLoaded: ContentLoadedService, private navbarService: NavbarService,
+              private pricingService: PricingServiceService) {
+    this.navbarService.setNavbar(true);
   }
 
   ngOnInit() {
     this.contentLoaded.onContentLoad(true);
+    this.pricingService.activePricingService.subscribe((data: string) => {
+      this.activeTab = data;
+      console.log('ACTIVE TAB', data);
+    });
   }
 
   onTabClick(tab: string) {
-    this.activeTab = tab;
+    this.pricingService.setService(tab);
   }
 
 }

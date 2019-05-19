@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ContentLoadedService} from './services/content-loaded.service';
-import {NavbarService} from './services/navbar.service';
+import {ContentLoadedService} from './shared/services/content-loaded.service';
+import {NavbarService} from './shared/services/navbar.service';
 
 @Component({
   selector: 'app-root',
