@@ -8,10 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WebsitePreviewComponent implements OnInit {
 
   @Input() site: string;
+  @Input() link?: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  routeToLink() {
+    if (this.link) {
+      window.location.href = this.link;
+    }
   }
 
 }

@@ -6,9 +6,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TemplatePageRoutingModule} from './template-page-routing.module';
 import {PricingPageModule} from '../pricing-page/pricing-page.module';
 import {SharedModule} from '../shared/shared.module';
+import { TemplateStepsComponent } from './components/template-steps/template-steps.component';
 
 @NgModule({
-  declarations: [TemplatePageComponent],
+  declarations: [TemplatePageComponent, TemplateStepsComponent],
   imports: [
     CommonModule,
     TemplatePageRoutingModule,

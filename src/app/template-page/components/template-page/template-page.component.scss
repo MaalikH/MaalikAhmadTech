@@ -22,6 +22,11 @@
 }
 
 
-.row {
-  padding: 50px 0;
+.templates {
+  padding: 75px 0;
+}
+
+
+:host::ng-deep .header {
+  padding-bottom: 0px !important;
 }

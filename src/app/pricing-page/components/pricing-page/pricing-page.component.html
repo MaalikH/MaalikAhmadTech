@@ -1,18 +1,18 @@
-<app-page-header [title]="'PRICING'" [subtitle]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'">
+<app-page-header [title]="'PRICING'" [subtitle]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'" [backgroundPath]="'../../../../assets/background/shaking-hand.png'">
   <div class="row text-center">
     <div class="col-lg-12 text-center">
       <ul class="nav nav-pills justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" (click)="onTabClick('websites')" data-toggle="pill">WEB DEVELOPMENT</a>
+            <a class="nav-link" [ngClass]="{'active': activeTab === 'websites'}" (click)="onTabClick('websites')" data-toggle="pill">WEB DEVELOPMENT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="onTabClick('ecommerce')" data-toggle="pill" href="#">E-COMMERCE DEVELOPMENT</a>
+          <a class="nav-link" [ngClass]="{'active': activeTab === 'ecommerce'}"  (click)="onTabClick('ecommerce')" data-toggle="pill" href="#">E-COMMERCE DEVELOPMENT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="onTabClick('design')" data-toggle="pill" href="#">GRAPHIC DESIGN</a>
+          <a class="nav-link" [ngClass]="{'active': activeTab === 'design'}"  (click)="onTabClick('design')" data-toggle="pill" href="#">GRAPHIC DESIGN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="onTabClick('branding')" data-toggle="pill" href="#">BRANDING</a>
+          <a class="nav-link" [ngClass]="{'active': activeTab === 'branding'}"  (click)="onTabClick('branding')" data-toggle="pill" href="#">BRANDING</a>
         </li>
       </ul>
     </div>

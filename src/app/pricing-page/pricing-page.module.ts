@@ -4,17 +4,18 @@ import { PricingPageComponent } from './components/pricing-page/pricing-page.com
 import {PricingPageRoutingModule} from './pricing-page-routing.module';
 import { PricingCardComponent } from './components/pricing-card/pricing-card.component';
 import {AnimateInModule} from 'ngx-animate-in';
-import {PageHeaderComponent} from '../page-header/page-header.component';
+import {PageHeaderComponent} from '../shared/components/page-header/page-header.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
-  declarations: [PricingPageComponent, PricingCardComponent, PageHeaderComponent],
+  declarations: [PricingPageComponent, PricingCardComponent],
   imports: [
     CommonModule,
     PricingPageRoutingModule,
-    AnimateInModule
+    AnimateInModule,
+    SharedModule
   ],
   exports: [
-    PageHeaderComponent
   ]
 })
 export class PricingPageModule { }

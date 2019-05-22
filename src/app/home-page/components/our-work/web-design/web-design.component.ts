@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Router} from '@angular/router';
+import {TemplatesService} from '../../../../shared/services/templates.service';
 
 @Component({
   selector: 'app-web-design',
@@ -86,9 +88,14 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class WebDesignComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private templatesService: TemplatesService) { }
 
   ngOnInit() {
+  }
+
+  routeToTemplate(type: string) {
+    this.templatesService.changeTemplateCategory(type);
+    this.router.navigate(['/templates']);
   }
 
 }

@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-lg-4 text-center" [@simpleFadeAnimation1]="'in'" >
-    <app-website-preview [site]="'../../../../../assets/templates/template3.jpg'">
+    <app-website-preview [site]="'../../../../../assets/templates/template3.jpg'" (click)="routeToTemplate('landing-page')">
     </app-website-preview>
   </div>
 
   <div class="col-lg-4 text-center" [@simpleFadeAnimation1]="'in'" >
-    <app-website-preview [site]="'../../../../../assets/templates/template7.jpg'">
+    <app-website-preview [site]="'../../../../../assets/templates/template7.jpg'" (click)="routeToTemplate('business')">
     </app-website-preview>
   </div>
 
   <div class="col-lg-4 text-center" [@simpleFadeAnimation1]="'in'" >
-    <app-website-preview [site]="'../../../../../assets/templates/template12.jpg'">
+    <app-website-preview [site]="'../../../../../assets/templates/template12.jpg'" (click)="routeToTemplate('portfolio')">
     </app-website-preview>
   </div>
 
