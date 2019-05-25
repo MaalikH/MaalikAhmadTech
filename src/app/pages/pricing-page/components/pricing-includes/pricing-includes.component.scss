@@ -1,0 +1,29 @@
+@import "../../../../../variables";
+
+.icon {
+  margin-right: 25px;
+  color: $primary;
+  font-size: 48px;
+}
+
+.icon-container {
+  min-width: 85px;
+}
+
+.included-container {
+  margin-bottom: 15px;
+}
+
+.included-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.included-info {
+  padding: 10px
+}
+
+.included-subtitle {
+  font-size: 18px;
+}

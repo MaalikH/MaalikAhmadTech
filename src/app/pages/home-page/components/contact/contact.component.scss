@@ -1,0 +1,62 @@
+@import "../../../../../variables";
+
+.container-fluid {
+  padding: 50px 0 100px 0 !important;
+  background-image: linear-gradient(0deg,rgba(250,47,47,.8),rgba(250,47,47,.8)),  url("../../../../../assets/home/jumbo-bg/jumbo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact-container {
+  margin-bottom: -260px;
+}
+
+.filler {
+  margin-bottom: 250px;
+}
+
+.section-title {
+  color: $alt !important;
+}
+a {
+  text-decoration: none;
+}
+
+.contact-bar {
+  border: 2px solid $primary;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.center-section {
+  border-left: 1px solid $primary;
+  border-right: 1px solid $primary;
+}
+
+.contact-section {
+  width: 300px;
+  height: 300px;
+
+
+  background-color: $alt;
+
+  .title {
+    color: $primary;
+  }
+
+  .icon {
+    max-height: 100px;
+  }
+
+  i {
+    font-size: 4em;
+    margin-bottom: 25px;
+    color: $primary
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .contact-bar {
+    flex-direction: column;
+  }
+}

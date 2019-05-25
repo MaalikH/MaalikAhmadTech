@@ -17,7 +17,7 @@ export class WebsitePreviewComponent implements OnInit {
 
   routeToLink() {
     if (this.link) {
-      window.location.href = this.link;
+      window.open(this.link);
     }
   }
 

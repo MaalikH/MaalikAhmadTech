@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomePageModule} from './home-page/home-page.module';
+import {HomePageModule} from './pages/home-page/home-page.module';
 
 const routes: Routes = [
   { path: '',
@@ -9,19 +9,19 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home-page/home-page.module#HomePageModule'
+    loadChildren: './pages/home-page/home-page.module#HomePageModule'
   },
   {
     path: 'pricing',
-    loadChildren: './pricing-page/pricing-page.module#PricingPageModule'
+    loadChildren: './pages/pricing-page/pricing-page.module#PricingPageModule'
   },
   {
     path: 'templates',
-    loadChildren: './template-page/template-page.module#TemplatePageModule'
+    loadChildren: './pages/template-page/template-page.module#TemplatePageModule'
   },
   {
     path: 'contact',
-    redirectTo: './contact-page/contact-page.module#ContactPageModule'
+    redirectTo: './pages/contact-page/contact-page.module#ContactPageModule'
   }
 ];
 

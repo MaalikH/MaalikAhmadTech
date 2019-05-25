@@ -5,9 +5,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
-      <p class="faq-question">THIS IS THE QUESTION?</p>
-      <p class="faq-answer">This is the answer</p>
+    <div class="col-md-6 faq" *ngFor="let faq of faqs" [hidden]="faq.type !== type">
+      <p class="faq-question">{{faq.question}}</p>
+      <p class="faq-answer">{{faq.answer}}</p>
     </div>
   </div>
 </div>
