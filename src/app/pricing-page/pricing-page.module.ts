@@ -6,9 +6,10 @@ import { PricingCardComponent } from './components/pricing-card/pricing-card.com
 import {AnimateInModule} from 'ngx-animate-in';
 import {PageHeaderComponent} from '../shared/components/page-header/page-header.component';
 import {SharedModule} from '../shared/shared.module';
+import { PricingIncludesComponent } from './components/pricing-includes/pricing-includes.component';
 
 @NgModule({
-  declarations: [PricingPageComponent, PricingCardComponent],
+  declarations: [PricingPageComponent, PricingCardComponent, PricingIncludesComponent],
   imports: [
     CommonModule,
     PricingPageRoutingModule,

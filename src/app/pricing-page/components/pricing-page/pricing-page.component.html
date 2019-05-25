@@ -18,9 +18,7 @@
     </div>
   </div>
 </app-page-header>
-
 <div class="container pricing-cards">
-
   <div class="row d-flex justify-content-center" animateIn *ngIf="activeTab === 'websites'">
     <app-pricing-card [pricingInfo]="webPricing" [class]="'web'"></app-pricing-card>
   </div>
@@ -40,3 +38,4 @@
     </div>
   </div>
 </div>
+<app-pricing-includes></app-pricing-includes>

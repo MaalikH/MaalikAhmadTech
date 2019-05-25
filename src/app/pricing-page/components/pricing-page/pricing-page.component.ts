@@ -18,7 +18,6 @@ export class PricingPageComponent implements OnInit {
       info: [
         'Professionals & Portfolio Showcase',
         '3+ Resume Template Choices',
-        '7 Day Turnaround'
       ]
     },
     {
@@ -28,7 +27,6 @@ export class PricingPageComponent implements OnInit {
         'One Page Introduction to Your Business, Brand, or Program',
         'Provide Info and Contact Information',
         'Showcase Pricing, Previous Work, and Collect Customer Data',
-        '14-21 Day Turnaround'
       ]
     },
     {
@@ -37,8 +35,7 @@ export class PricingPageComponent implements OnInit {
       info: [
         'Complete Website With Up to 6 Main Pages',
         'Variety of Design Templates to Choose From',
-        '5 Stock Images Included',
-        '14-21 day turnaround'
+        'Stock Images Included',
       ]
     },
     {
@@ -49,7 +46,6 @@ export class PricingPageComponent implements OnInit {
         'Custom Design & Wireframes',
         'Database & Server Setup',
         'Stock Images Included',
-        '21-28 day turnaround'
       ],
       hourly: true
     },
