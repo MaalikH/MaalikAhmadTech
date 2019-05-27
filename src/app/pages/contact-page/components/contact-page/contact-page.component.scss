@@ -1,0 +1,27 @@
+@import "../../../../../variables";
+
+:host::ng-deep .page-header {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+:host::ng-deep .page-title{
+  font-size: 5em !important;
+}
+
+.container-fluid {
+  background-color: #f7f7f7 !important;
+}
+
+
+.social-icon {
+  font-size: 50px;
+  color: $primary;
+}
+
+.social-bar {
+  padding-bottom: 50px;
+}

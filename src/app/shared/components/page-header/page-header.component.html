@@ -1,8 +1,8 @@
-<div class="container-fluid header" [ngStyle]="{'background-image': 'url(' + backgroundPath + ')'}">
+<div class="container-fluid header page-header" [ngStyle]="{'background-image': 'url(' + backgroundPath + ')'}">
   <div class="row">
     <div class="col-12 text-center">
       <h2 class="page-title">{{title}}</h2>
-      <p class="subtitle">{{subtitle}}</p>
+      <p *ngIf="subtitle" class="subtitle">{{subtitle}}</p>
     </div>
   </div>
   <ng-content></ng-content>

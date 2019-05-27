@@ -14,7 +14,6 @@ export class PricingCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('PRICING INFO', this.pricingInfo);
   }
 
 }

@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    redirectTo: './pages/contact-page/contact-page.module#ContactPageModule'
+    loadChildren: './pages/contact-page/contact-page.module#ContactPageModule'
   }
 ];
 
