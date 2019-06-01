@@ -1,0 +1,35 @@
+<div class="container-fluid section">
+  <div class="row">
+    <div class="col-lg-6 text-center">
+      <app-website-preview *ngIf="activeTab === 'landing-page'" [site]="'../../../../../assets/templates/template19.jpg'"></app-website-preview>
+      <app-website-preview *ngIf="activeTab === 'business'" [site]="'../../../../../assets/templates/template20.jpg'"></app-website-preview>
+      <app-website-preview *ngIf="activeTab === 'e-commerce'" [site]="'../../../../../assets/templates/template13.jpg'"></app-website-preview>
+    </div>
+    <div class="col-lg-6">
+      <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="section-title ">TEMPLATES</h1>
+          <div class="row text-center">
+            <div class="col-lg-12 text-center">
+              <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" (click)="onTabClick('landing-page')" data-toggle="pill" href="#">LANDING PAGE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="onTabClick('business')" data-toggle="pill" href="#">BUSINESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="onTabClick('e-commerce')" data-toggle="pill" href="#">E-COMMERCE</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-left">With rights to over 500+ design templates, templates are the most cost efficient & practical option for our customers looking for a complete website. Templates are professional and can be used to make almost any site. Hover over the monitor to see a demo of our templates.</p>
+          <div class="btn btn-service" [routerLink]="['/templates']">LEARN MORE</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

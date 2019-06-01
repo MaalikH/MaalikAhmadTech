@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomePageModule} from './pages/home-page/home-page.module';
+import {Angulartics2Module} from 'angulartics2';
 
 const routes: Routes = [
   { path: '',
@@ -26,7 +27,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

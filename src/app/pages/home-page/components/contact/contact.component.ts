@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Angulartics2} from 'angulartics2';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private angulartics2: Angulartics2) { }
 
   ngOnInit() {
   }
 
+  sendAnalytics(option: string) {
+    this.angulartics2.eventTrack.next({
+      action: 'Click',
+      properties: {
+        category: 'Home - Contact',
+        label: option,
+      }
+    });
+  }
 }

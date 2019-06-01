@@ -21,6 +21,8 @@ import { FooterComponent } from '../../footer/footer.component';
 import { WebDesignComponent } from './components/our-work/web-design/web-design.component';
 import { WebsitePreviewComponent } from '../../shared/components/website-preview/website-preview.component';
 import {SharedModule} from '../../shared/shared.module';
+import {Angulartics2Module} from 'angulartics2';
+import { TemplatesComponent } from './components/templates/templates.component';
 
 
 
@@ -31,8 +33,9 @@ import {SharedModule} from '../../shared/shared.module';
    CommonModule,
    InViewportModule,
    AnimateInModule,
+   Angulartics2Module,
    SharedModule
  ],
-  declarations: [HomePageComponent, JumbotronComponent, TechnologyBannerComponent, WhyChooseUsComponent, ServicesComponent, OurWorkComponent, WebsitesComponent, GraphicDesignComponent, BrandingComponent, ContactComponent, WebDesignComponent]
+  declarations: [HomePageComponent, JumbotronComponent, TechnologyBannerComponent, WhyChooseUsComponent, ServicesComponent, OurWorkComponent, WebsitesComponent, GraphicDesignComponent, BrandingComponent, ContactComponent, WebDesignComponent, TemplatesComponent]
 })
 export class HomePageModule { }

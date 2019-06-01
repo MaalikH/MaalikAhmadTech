@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactFormModel} from '../../models/contact-form.model';
+import {AngularFirestoreDocument, AngularFirestore} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,13 +19,17 @@ export class ContactFormComponent implements OnInit {
     type: null
   };
 
-  constructor() { }
+  constructor(private afs: AngularFirestore, private router: Router) {
+
+  }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log('INQUIRY', this.inquiry);
+    const inquiriesCollection = this.afs.collection<ContactFormModel>('inquiries');
+    inquiriesCollection.add(this.inquiry);
+    this.router.navigate(['/home']);
   }
 
 }

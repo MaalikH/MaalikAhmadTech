@@ -12,9 +12,6 @@
             <a class="nav-link active" (click)="onTabClick('websites')" data-toggle="pill" href="#">WEBSITES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="onTabClick('web-design')" data-toggle="pill" href="#">WEB TEMPLATES</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" (click)="onTabClick('graphic-design')" data-toggle="pill" href="#">GRAPHIC DESIGN</a>
           </li>
           <li class="nav-item">
@@ -24,7 +21,6 @@
       </div>
     </div>
     <app-websites *ngIf="activeTab === 'websites'"></app-websites>
-    <app-web-design *ngIf="activeTab === 'web-design'"></app-web-design>
     <app-graphic-design *ngIf="activeTab === 'graphic-design'"></app-graphic-design>
     <app-branding *ngIf="activeTab === 'branding'"></app-branding>
   </div>

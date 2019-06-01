@@ -4,6 +4,8 @@ import {fromEvent, Observable, of, Subject, Subscription} from 'rxjs';
 import { map, filter, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import {Router} from '@angular/router';
 import {PricingServiceService} from '../../../../shared/services/pricing-service.service';
+import {Angulartics2} from 'angulartics2';
+import {GoogleAnalyticsService} from '../../../../shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-services',
@@ -91,16 +93,34 @@ import {PricingServiceService} from '../../../../shared/services/pricing-service
 export class ServicesComponent implements OnInit {
 
 
-  constructor(private renderer: Renderer2, private router: Router, private pricingService: PricingServiceService ) {
+  constructor(private renderer: Renderer2, private router: Router, private pricingService: PricingServiceService,
+              private angulartics2: Angulartics2,  private googleAnalyticsService: GoogleAnalyticsService) {
   }
 
   ngOnInit(): void {
   }
 
-  routeToPricing(service: string) {
-    console.log('ROUTE TO PRICING');
+  routeToPricing(service?: string) {
+    console.log('CLICKED');
+    if (service) {
+      this.pricingService.setService(service);
+      this.angulartics2.eventTrack.next({
+        action: 'Click',
+        properties: {
+          category: 'Home - Services',
+          label: service,
+        }
+      });
+    } else {
+      this.angulartics2.eventTrack.next({
+        action: 'Click',
+        properties: {
+          category: 'Home - Services',
+          label: 'Learn More',
+        }
+      });
+    }
     this.router.navigateByUrl('/pricing');
-    this.pricingService.setService(service);
   }
 
   public onIntersection({ target, visible }: { target: Element; visible: boolean }): void {

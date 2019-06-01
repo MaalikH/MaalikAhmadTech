@@ -8,17 +8,17 @@
 
   <div class="row d-flex justify-content-center">
     <div class="contact-bar d-flex">
-      <a href="mailto:maalikahmadtech@gmail.com" target="_top">
+      <a href="mailto:maalikahmadtech@gmail.com" target="_top" (click)="sendAnalytics('email')">
         <div class="contact-section text-center d-flex flex-column align-content-center justify-content-center align-items-center">
           <i class="far fa-envelope"></i>
           <h5 class="title">EMAIL US</h5>
         </div>
       </a>
-      <div class="contact-section center-section text-center d-flex flex-column align-content-center justify-content-center align-items-center">
+      <div class="contact-section center-section text-center d-flex flex-column align-content-center justify-content-center align-items-center" [routerLink]="['/contact']">
         <i class="far fa-comment-dots"></i>
         <h5 class="title">SEND A MESSAGE</h5>
       </div>
-      <a href="http://www.instagram.com/maalikahmad.tech" target="_top">
+      <a href="http://www.instagram.com/manifestagency.tech" target="_blank" (click)="sendAnalytics('instagram')">
         <div class="contact-section text-center d-flex flex-column align-content-center justify-content-center align-items-center">
           <i class="fa fa-instagram"></i>
           <h5 class="title">FOLLOW US</h5>

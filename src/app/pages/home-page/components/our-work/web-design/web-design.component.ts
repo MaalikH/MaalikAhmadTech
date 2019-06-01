@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Router} from '@angular/router';
 import {TemplatesService} from '../../../../../shared/services/templates.service';
+import {Angulartics2} from 'angulartics2';
 
 @Component({
   selector: 'app-web-design',
@@ -88,7 +89,7 @@ import {TemplatesService} from '../../../../../shared/services/templates.service
 })
 export class WebDesignComponent implements OnInit {
 
-  constructor(private router: Router, private templatesService: TemplatesService) { }
+  constructor(private router: Router, private templatesService: TemplatesService, private angulartics2: Angulartics2) { }
 
   ngOnInit() {
   }
@@ -96,6 +97,13 @@ export class WebDesignComponent implements OnInit {
   routeToTemplate(type: string) {
     this.templatesService.changeTemplateCategory(type);
     this.router.navigate(['/templates']);
+    this.angulartics2.eventTrack.next({
+      action: 'Click',
+      properties: {
+        category: 'Home - Work',
+        label: 'Template Preview Clicked',
+      }
+    })
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ContentLoadedService} from '../../../../shared/services/content-loaded.service';
 import {TemplatesService} from '../../../../shared/services/templates.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Angulartics2} from 'angulartics2';
 
 @Component({
   selector: 'app-template-page',
@@ -90,7 +91,8 @@ export class TemplatePageComponent implements OnInit {
 
   activeTab = 'landing-page';
 
-  constructor(private contentLoaded: ContentLoadedService, private templatesService: TemplatesService) { }
+  constructor(private contentLoaded: ContentLoadedService, private templatesService: TemplatesService,
+              private angulartics2: Angulartics2) { }
 
   ngOnInit() {
     this.contentLoaded.onContentLoad(true);
@@ -101,5 +103,14 @@ export class TemplatePageComponent implements OnInit {
 
   onTabClick(tab: string) {
     this.activeTab = tab;
+    this.angulartics2.eventTrack.next({
+      action: 'Click',
+      properties: {
+        category: 'Templates - Tabs',
+        label: tab,
+      }
+    });
   }
+
+
 }

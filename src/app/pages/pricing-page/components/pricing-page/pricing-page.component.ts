@@ -18,6 +18,7 @@ export class PricingPageComponent implements OnInit {
       info: [
         'Professionals & Portfolio Showcase',
         '3+ Resume Template Choices',
+        'Standout against other applicants',
       ]
     },
     {
@@ -30,22 +31,22 @@ export class PricingPageComponent implements OnInit {
       ]
     },
     {
-      title: 'WEBSITE PRO',
+      title: 'WEBSITE ELITE',
       price: 750,
       info: [
         'Complete Website With Up to 6 Main Pages',
         'Variety of Design Templates to Choose From',
-        'Stock Images Included',
+        'Best Deal for Professionals Sites',
       ]
     },
     {
-      title: 'WEBSITE ELITE',
+      title: 'WEBSITE PREMIUM',
       price: 40,
       info: [
-        'Complete Website With Up to 6 Main Pages',
+        'Custom Website',
         'Custom Design & Wireframes',
+        'User Authentication',
         'Database & Server Setup',
-        'Stock Images Included',
       ],
       hourly: true
     },
@@ -53,10 +54,10 @@ export class PricingPageComponent implements OnInit {
   eCommercePricing: PricingModel[] = [
     {
       title: 'E-COMMERCE LIGHT',
-      price: 550,
+      price: 600,
       info: [
         'Shopify Design',
-        'Store Setup (Max 15 Products)',
+        'Store OR Appointments Setup',
         'Hosting by Shopify ($30/month)',
         '14-21 day turnaround',
       ]
@@ -66,10 +67,21 @@ export class PricingPageComponent implements OnInit {
       price: 850,
       info: [
         'Custom WooCommerce Design & Setup',
+        'Shop OR Appointments Setup',
         'Hosting Included (No Monthly Payment)',
         '21-28 day turnaround'
       ]
     },
+    {
+      title: 'E-COMMERCE ELITE',
+      price: 1000,
+      info: [
+        'Custom WooCommerce Design & Setup',
+        'Shop AND Appointments Setup',
+        'Hosting Included (No Monthly Payment)',
+        '21-28 day turnaround'
+      ]
+    }
   ];
   designPricing: PricingModel[] = [
     {
@@ -126,10 +138,10 @@ export class PricingPageComponent implements OnInit {
       ]
     },
     {
-      title: 'BRANDING MAX',
+      title: 'BRANDING ELITE',
       price: 200,
       info: [
-        'Basic or Premium',
+        'Basic or Premium Logo',
         '500 Business Cards (Custom Design)',
         '1 Flyer Design'
       ]
